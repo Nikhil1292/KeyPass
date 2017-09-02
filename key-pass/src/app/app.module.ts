@@ -3,7 +3,11 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {
+  KeyPassListComponent,
+  KeyPassDetailComponent
+} from '../pages';
+
 import {
   AppConstant,
   CryptoService
@@ -17,10 +21,15 @@ const services = [
   AppConstant
 ]
 
+const component = [
+  KeyPassListComponent,
+  KeyPassDetailComponent
+];
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    component
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,7 @@ const services = [
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    component
   ],
   providers: [
     StatusBar,

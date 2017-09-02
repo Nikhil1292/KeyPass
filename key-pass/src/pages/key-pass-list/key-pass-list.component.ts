@@ -4,10 +4,10 @@ import { NavController } from 'ionic-angular';
 import { CryptoService } from '../../shared';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'key-pass-list.component',
+  templateUrl: 'key-pass-list.component.html'
 })
-export class HomePage {
+export class KeyPassListComponent {
 
   constructor(public navCtrl: NavController, private cryptoService: CryptoService) {
   }
